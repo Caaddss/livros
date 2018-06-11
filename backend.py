@@ -1,51 +1,6 @@
 import sqlite3
 import sqlite3 as sql
 
-# Conectando ao banco de dados
-# conn = sqlite3.connect(database)
-# cur  = conn.cursor()
-# # Ações usando o banco...
-# cur.execute("Create TABLE IF NOT EXITS cliente(id INTEGER PRIMARY KEY, nome TEXT, sobrenome TEXT, email TEXT, cpf TEXT)")
-# # Fazendo commit e desconecta do banco
-# conn.commit()
-# conn.close()
-
-# Pra não ficar repetindo código, vamos encapsular
-# class TransactionObject():
-#     database    =   "clientes.db"
-#     conn        =   None
-#     cur         =   None
-#     connect     =   False
-#
-#     def connect(self):
-#         TransactionObject.conn=sql.connect(TransactionObject.database)
-#         TransactionObject.cur=TransactionObject.conn.cursor()
-#         TransactionObject.connect =   True
-#
-#     def disconnect(self):
-#         TransactionObject.conn.close()
-#         TransactionObject.connect = False
-#
-#     def execute(self, sql, parms = None):
-#         if TransactionObject.connect:
-#             if parms == None:
-#                 TransactionObject.cur.execute(sql)
-#             else:
-#                 TransactionObject.cur.execute(sql, parms)
-#             return True
-#         else:
-#             return False
-#
-#     def fetchall(self):
-#         return TransactionObject.cur.fetchall()
-#
-#     def persist(self):
-#         if TransactionObject.connect:
-#             TransactionObject.conn.commit()
-#             return True
-#         else:
-#             return False
-
 def iniitDB():
     database = "minhabiblioteca.db"
     conn = sqlite3.connect(database)

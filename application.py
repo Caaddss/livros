@@ -1,5 +1,6 @@
-from gui import gui
+from gui import *
 
-app = gui
+app = None
+app = gui()
 
-app.run("gui()")
+app.run()

@@ -2,7 +2,7 @@ from gui import *
 import backend as core
 
 app = None
-
+app = gui()
 
 def view_command():
     rows = core.view()
@@ -12,16 +12,16 @@ def view_command():
 
 def search_command():
     app.listLivros.delete(0, END)
-    rows =  core.search(app.txTitulo.get(),app.txtSubtitulo.get(),app.txtEditora.get(), app.txtAutor1.get(), app.txtAutor2.get(), app.txtAutor3.get(), app.txtCidade.get(),app.txtAno.get(),app.txtEdicao.get(), app.txtPaginas.get(), app.txtVolume.get())
+    rows =  core.search(app.txtTitulo.get(),app.txtSubtitulo.get(),app.txtEditora.get(), app.txtAutor1.get(), app.txtAutor2.get(), app.txtAutor3.get(), app.txtCidade.get(),app.txtAno.get(),app.txtEdicao.get(), app.txtPaginas.get(), app.txtVolume.get())
     for r in rows:
         app.listLivros.insert(END, r)
 
 def insert_command():
-    core.insert(app.txTitulo.get(),app.txtSubtitulo.get(),app.txtEditora.get(), app.txtAutor1.get(), app.txtAutor2.get(), app.txtAutor3.get(), app.txtCidade.get(),app.txtAno.get(),app.txtEdicao.get(), app.txtPaginas.get(), app.txtVolume.get())
+    core.insert(app.txtTitulo.get(),app.txtSubtitulo.get(),app.txtEditora.get(), app.txtAutor1.get(), app.txtAutor2.get(), app.txtAutor3.get(), app.txtCidade.get(),app.txtAno.get(),app.txtEdicao.get(), app.txtPaginas.get(), app.txtVolume.get())
     view_command()
 
 def update_command():
-    core.update(selected[0],app.txTitulo.get(),app.txtSubtitulo.get(),app.txtEditora.get(), app.txtAutor1.get(), app.txtAutor2.get(), app.txtAutor3.get(), app.txtCidade.get(),app.txtAno.get(),app.txtEdicao.get(), app.txtPaginas.get(), app.txtVolume.get())
+    core.update(selected[0],app.txtTitulo.get(),app.txtSubtitulo.get(),app.txtEditora.get(), app.txtAutor1.get(), app.txtAutor2.get(), app.txtAutor3.get(), app.txtCidade.get(),app.txtAno.get(),app.txtEdicao.get(), app.txtPaginas.get(), app.txtVolume.get())
     view_command()
 
 def del_command():

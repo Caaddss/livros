@@ -5,7 +5,7 @@ class gui():
     window.wm_title("Minha Biblioteca")
 
 # Variáveis
-    txTitulo = StringVar()
+    txtTitulo = StringVar()
     txtSubtitulo = StringVar()
     txtEditora = StringVar()
     txtAutor1 = StringVar()
@@ -31,7 +31,7 @@ class gui():
     lblvolume = Label(window, text="Volume")
 
 # Campos de input
-    enttitulo = Entry(window, textvariable=txTitulo)
+    enttitulo = Entry(window, textvariable=txtTitulo)
     entsubtitulo = Entry(window,textvariable=txtSubtitulo)
     enteditora = Entry(window, textvariable=txtEditora)
     entautor1 = Entry(window, textvariable=txtAutor1)
